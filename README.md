@@ -1,5 +1,5 @@
 # Ansible AWX Execution Environment with AWS, Azure, GCP, Kubernetes, Helm, Java and Terraform
-
+[![Publish Docker image](https://github.com/jterpstra1/ansible-awx-ee/actions/workflows/main.yml/badge.svg)](https://github.com/jterpstra1/ansible-awx-ee/actions/workflows/main.yml)
 ## Table of contents
 
 * [What is it?](#what-is-it)
