@@ -7,19 +7,8 @@ MAINTAINER Jurre van der Gaag - Terpstra <info@terpstra.tech>
 LABEL description Ansible AWX Execution Environment container with Cloud providers, Terraform, Kubernetes and other common tools.
 
 ENV ANSIBLE_COLLECTION_AWS_VERSION     7.2.0
-ENV JAVA_VERSION                       21
-
 
 USER root
-
-# Install build dependencies
-RUN dnf upgrade -y > /dev/null \
-  && dnf install -y \
-    java-${JAVA_VERSION}-openjdk \
-    openssl \
-    unzip \
-    > /dev/null \
-  && dnf clean all
 
 # Cloud: Amazon Web Services (AWS)
 RUN pip3 install -r https://raw.githubusercontent.com/ansible-collections/amazon.aws/${ANSIBLE_COLLECTION_AWS_VERSION}/requirements.txt
